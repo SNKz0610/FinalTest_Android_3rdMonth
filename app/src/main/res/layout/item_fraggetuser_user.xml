@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<data></data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="#AEFF51">
+
+    <TextView
+        android:id="@+id/text_itemuser_login"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_itemuser_type"/>
+    <TextView
+        android:id="@+id/text_itemuser_type"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/text_itemuser_login"
+        app:layout_constraintBottom_toTopOf="@+id/text_itemuser_url"/>
+
+    <TextView
+        android:id="@+id/text_itemuser_url"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@id/text_itemuser_type"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
