@@ -11,6 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class UserViewModel : ViewModel() {
+    var callBack: UserViewModelCallback? = null
     val retrofit = Retrofit.Builder()
         .baseUrl("https://api.github.com/")
         .addConverterFactory(GsonConverterFactory.create())
@@ -19,15 +20,15 @@ class UserViewModel : ViewModel() {
     val service = retrofit.create(UserService::class.java)
 
 
-    fun getAllUser() : ArrayList<User> {
+     fun getAllUser() {
         var listGet: ArrayList<User> = ArrayList()
-        viewModelScope.launch {
-             val result = service.getAllUser()
-            for(i in 0 until result.size){
+        viewModelScope.async {
+            val result = service.getAllUser()
+            for (i in 0 until result.size) {
                 listGet.add(result[i])
             }
+//            Log.d("Arr", listGet.toString())
+            callBack?.getListUser(listGet);
         }
-        Log.d("arr", listGet.toString())
-        return listGet
     }
 }

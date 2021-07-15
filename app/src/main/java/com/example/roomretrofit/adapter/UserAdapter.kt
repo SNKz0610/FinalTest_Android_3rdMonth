@@ -8,9 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.roomretrofit.databinding.ItemFraggetuserUserBinding
 import com.example.roomretrofit.entity.User
 
-class UserAdapter (val arrUsers : List<User>) : RecyclerView.Adapter<UserAdapter.Viewholder>() {
+class UserAdapter () : RecyclerView.Adapter<UserAdapter.Viewholder>() {
     private var statusFarvorite = 1;
     private lateinit var fragment: Fragment
+    var arrUsers : List<User> = ArrayList<User>()
 
     class Viewholder(val binding: ItemFraggetuserUserBinding) :
         RecyclerView.ViewHolder(binding.root) {}
