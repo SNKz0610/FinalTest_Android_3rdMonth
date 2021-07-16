@@ -27,8 +27,8 @@ class UserViewModel : ViewModel() {
             for (i in 0 until result.size) {
                 listGet.add(result[i])
             }
-//            Log.d("Arr", listGet.toString())
             callBack?.getListUser(listGet);
+
         }
     }
 }

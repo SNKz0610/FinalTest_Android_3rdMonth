@@ -1,3 +1,12 @@
 package com.example.roomretrofit.entity
 
-data class User(val login : String, val type : String, val url : String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "user")
+data class User(
+    val login : String,
+    val type : String,
+    val url : String ) {
+    @PrimaryKey(autoGenerate = true)
+    var idUser: Long = 0 }
