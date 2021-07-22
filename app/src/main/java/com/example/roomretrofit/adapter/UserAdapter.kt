@@ -4,17 +4,18 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.example.roomretrofit.databinding.ItemFraggetuserUserBinding
 import com.example.roomretrofit.entity.User
 
-class UserAdapter () : RecyclerView.Adapter<UserAdapter.Viewholder>() {
-    private var statusFarvorite = 1;
+class UserAdapter (val lifecycleOwner: LifecycleOwner) : RecyclerView.Adapter<UserAdapter.Viewholder>() {
     private lateinit var fragment: Fragment
     var arrUsers : List<User> = ArrayList<User>()
 
     class Viewholder(val binding: ItemFraggetuserUserBinding) :
         RecyclerView.ViewHolder(binding.root) {}
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserAdapter.Viewholder {
         val layoutInflater = LayoutInflater.from(parent.context)

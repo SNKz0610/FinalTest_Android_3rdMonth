@@ -1,0 +1,17 @@
+package com.example.roomretrofit.database
+
+import android.app.Application
+import android.content.SyncContext
+import com.example.roomretrofit.entity.User
+import kotlinx.coroutines.InternalCoroutinesApi
+
+class UserRepository (application: Application) {
+    @InternalCoroutinesApi
+    val database = UserDataBase.getInstance(application)
+
+    @InternalCoroutinesApi
+    fun getAllUsers() =database.userDAO().getAllUsers()
+
+    @InternalCoroutinesApi
+    suspend fun addListPeople(arrUsers : List<User>) = database.userDAO().addListUsers(arrUsers)
+}

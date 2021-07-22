@@ -9,5 +9,17 @@
         android:id="@+id/getUserFragment"
         android:name="com.example.roomretrofit.fragment.GetUserFragment"
         android:label="fragment_get_user"
-        tools:layout="@layout/fragment_get_user" />
+        tools:layout="@layout/fragment_get_user" >
+        <action
+            android:id="@+id/action_getUserFragment_to_saveUsersFragment"
+            app:destination="@id/saveUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveUsersFragment"
+        android:name="com.example.roomretrofit.fragment.SaveUsersFragment"
+        android:label="SaveUsersFragment" >
+        <action
+            android:id="@+id/action_saveUsersFragment_to_getUserFragment"
+            app:destination="@id/getUserFragment" />
+    </fragment>
 </navigation>
