@@ -21,5 +21,19 @@
         <action
             android:id="@+id/action_saveUsersFragment_to_getUserFragment"
             app:destination="@id/getUserFragment" />
+        <action
+            android:id="@+id/action_saveUsersFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.roomretrofit.fragment.EditUserFragment"
+        android:label="EditUserFragment" >
+        <action
+            android:id="@+id/backToSaveUsersFragment"
+            app:destination="@id/saveUsersFragment" />
+        <argument
+            android:name="user"
+            app:argType="com.example.roomretrofit.entity.User" />
     </fragment>
 </navigation>

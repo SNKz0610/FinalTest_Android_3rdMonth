@@ -19,10 +19,7 @@ import com.example.roomretrofit.entity.User
 import com.example.roomretrofit.service.UserService
 import com.example.roomretrofit.viewmodel.UserViewModel
 import com.example.roomretrofit.viewmodel.UserViewModelCallback
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.async
+import kotlinx.coroutines.*
 import retrofit2.Call
 
 
@@ -71,7 +68,7 @@ class GetUserFragment : Fragment(), UserViewModelCallback {
     @InternalCoroutinesApi
     private fun saveListUsers() {
         binding. buttonFraggetuserSave.setOnClickListener {
-            GlobalScope.async (Dispatchers.IO) {
+            GlobalScope.launch (Dispatchers.IO) {
                 userRepo.addListPeople(arrayUser)
             }
             Toast.makeText(context, "saved to Room DB success!", Toast.LENGTH_LONG).show()

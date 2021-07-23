@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".fragment.EditUserFragment">
+
+        <TextView
+            android:id="@+id/text_edit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="serif"
+            android:text="Name User"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_edit_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="serif"
+            android:text="Type User"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_edit_name" />
+
+        <TextView
+            android:id="@+id/text_edit_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="serif"
+            android:text="URL User"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_edit_type" />
+
+        <EditText
+            android:id="@+id/edittext_edit_name"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="#AEFF51"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toRightOf="@id/text_edit_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_edit_type"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="#AEFF51"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toRightOf="@id/text_edit_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edittext_edit_name" />
+
+        <EditText
+            android:id="@+id/edittext_edit_url"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="20dp"
+            android:background="#AEFF51"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            app:layout_constraintLeft_toRightOf="@id/text_edit_name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edittext_edit_type" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_edit_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#03A9F4"
+            android:padding="10dp"
+            android:text="UPDATE"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/button_edit_back"
+            app:layout_constraintTop_toBottomOf="@id/edittext_edit_url" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_edit_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="#03A9F4"
+            android:padding="10dp"
+            android:text="Back"
+            app:layout_constraintLeft_toRightOf="@id/button_edit_update"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edittext_edit_url" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
