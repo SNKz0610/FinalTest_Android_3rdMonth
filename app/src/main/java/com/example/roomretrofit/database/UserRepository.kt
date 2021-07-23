@@ -14,4 +14,10 @@ class UserRepository (application: Application) {
 
     @InternalCoroutinesApi
     suspend fun addListPeople(arrUsers : List<User>) = database.userDAO().addListUsers(arrUsers)
+
+    @InternalCoroutinesApi
+    suspend fun updateUser(user : User) = database.userDAO().updateUsers(user)
+
+    @InternalCoroutinesApi
+    suspend fun deleteUser(user : User) = database.userDAO().deleteUser(user)
 }
